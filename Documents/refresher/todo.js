@@ -58,7 +58,7 @@ document.querySelector('#filtered-todo').appendChild(summary);
  document.querySelector('#add-todo').addEventListener('click', (e) => {
     e.target.textContent = `clicked`;
  });
-//  not functional yet
+//  with each element typed re assigns value of filter.text and calls renderTodos function
  document.querySelector('#new-todo').addEventListener('input',(e) => {
     filter.text = e.target.value;
     renderTodos(myTodos,filter)
