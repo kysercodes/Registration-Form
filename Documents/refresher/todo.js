@@ -20,12 +20,7 @@ const filter = {
     text: ''
 }
 
-//  renders todos in myTodo object on start up
- myTodos.forEach((todo) => {
-    const showTodo = document.createElement('p');
-    showTodo.textContent = todo.text;
-    document.querySelector('#filtered-todo').appendChild(showTodo)
- })
+
 //  renders filtered todos and shows how many are left to complete
 const renderTodos = (todos,filters) => {
     // filters todos that match filter object
@@ -52,14 +47,21 @@ document.querySelector('#filtered-todo').appendChild(summary);
 
 }
 
- 
+ renderTodos(myTodos,filter)
 
-// not fucntional yet
- document.querySelector('#add-todo').addEventListener('click', (e) => {
-    e.target.textContent = `clicked`;
- });
 //  with each element typed re assigns value of filter.text and calls renderTodos function
- document.querySelector('#new-todo').addEventListener('input',(e) => {
+ document.querySelector('#search-text').addEventListener('input',(e) => {
     filter.text = e.target.value;
     renderTodos(myTodos,filter)
  });
+
+ document.querySelector('#todo-form').addEventListener('submit',(e) => {
+    e.preventDefault();
+    myTodos.push({
+        text:e.target.elements.todoInput.value,
+        completed:false
+    })
+    renderTodos(myTodos,filter)
+    e.target.elements.todoInput.value = ''
+ })
+  /* =============== HELPER FUNCTIONS ================ */
