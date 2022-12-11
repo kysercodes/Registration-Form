@@ -1,3 +1,5 @@
+
+
 const getSavedTodos = () => {
     const todosJSON = localStorage.getItem('todos')
 
@@ -7,10 +9,26 @@ if (todosJSON !== null) {
     return [];
 }
 };
+
+
 // Generate the DOM structure for a todo
 const generateTodoDom = (todo) => {
-    const filteredTodo = document.createElement('p');
-    filteredTodo.textContent = todo.text;
+    // create the elements
+    const filteredTodo = document.createElement('div');
+    const todoEl = document.createElement('span');
+    // create the checkbox and set the type
+    const todoBox = document.createElement('input');
+    todoBox.type = 'checkbox';
+    const removeTodo = document.createElement('button');
+    removeTodo.textContent = 'x';
+
+//    set the text of the todo
+    todoEl.textContent = todo.text;
+    // attach the text  checkbox and button
+    filteredTodo.appendChild(todoBox);
+    filteredTodo.appendChild(todoEl);
+    filteredTodo.appendChild(removeTodo);
+   
     return filteredTodo;
 }
 

@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
+const myUUID = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+console.log(myUUID)
 const myTodos = getSavedTodos();
 
 const filter = {
@@ -31,6 +34,7 @@ document.querySelector('#hide-completed').addEventListener('change',(e) => {
     filter.completed = e.target.checked;
     renderTodos(myTodos,filter)
 });
+
 
   /* =============== HELPER FUNCTIONS ================ */
 
