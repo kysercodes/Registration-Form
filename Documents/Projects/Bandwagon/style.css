@@ -1,0 +1,145 @@
+:root {
+  --main-bg-color: #294073;
+  --main-txt-color: #f9de27;
+  --border-radius: 3px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--main-txt-color)
+}
+/* Background image */
+body {
+  background-image: url(https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https%3A%2F%2Ffansided.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2022%2F11%2F19508574-850x560.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100%;
+  width: 100vw;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Serif NP Hmong', serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* background overlay */
+body:before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+/* h1 and paragraph content */
+header{
+    text-align: center;
+    margin: 25px auto;
+}
+
+header h1  {
+  margin: 25px 0;
+}
+textarea {
+  color: var(--main-bg-color);
+}
+
+
+/* form */
+  form {
+    margin: 25px auto;
+    max-width: 600px;
+    background-color: var(--main-bg-color);
+    opacity: 0.85;
+    border-radius:var(--border-radius);
+    padding: 10px;
+
+  }
+
+ 
+
+  #new-fan, #fandom-level, #ryan-day, #improvements, #why-you {
+   width: 95%;
+    border: none;
+    color: var(--main-bg-color);
+    margin: 0 auto;
+  }
+  #new-fan, #fandom-level label {
+    margin-top: 20px;
+  }
+
+
+
+   input[type= "text"], input[type= "email"] {
+    width: 100%;
+    color: var(--main-bg-color);
+    margin: 20px 0;
+    border-radius: var(--border-radius);
+    border: none;
+    height: 30px
+  }
+
+/* dropdown  */
+  select  {
+    width: 100%;
+    margin: 20px 0;
+    color: var(--main-bg-color);
+    height: 30px;
+    border-radius: var(--border-radius);
+  }
+/* radio buttons */
+#ryan-day {
+ border: none;
+} 
+
+  #ryan-day label {
+    border: none;
+    display: flex;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #ryan-day input {
+    margin: 0 10px 0 0;
+  }
+
+  #improvements label {
+    display: flex;
+    margin: 10px 0;
+  }
+
+  #improvements input {
+    margin: 0 10px 0 0;
+  }
+/* text area */
+  #why-you  {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  #why-you label  {
+  margin: 20px 0;
+  }
+  
+  /* submit button */
+  #button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #submit-btn {
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--main-txt-color);
+    height: 30px;
+    width: 90%;
+    color: #294073;
+  }
+/* tiny border */
+  #line {
+    height: 1px;
+    background-color: black;
+  }
