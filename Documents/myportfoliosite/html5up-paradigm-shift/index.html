@@ -410,7 +410,24 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 						</header> -->
 						<div class="content">
 							<p><strong>Send me an inquiry!</strong> Feel free to reach out and send me a message with what you'd like built and we can put a plan together</p>
-							<form>
+							<form name="contact" netlify>
+								<p>
+								  <label>Name <input type="text" name="name" /></label>
+								</p>
+								<p>
+								  <label>Email <input type="email" name="email" /></label>
+								</p>
+								<div class="fields">
+									
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+									</div>
+								</div>
+								<p>
+								  <button type="submit">Send</button>
+								</p>
+							  </form>
+							<!-- <form>
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -425,7 +442,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" class="button primary" /></li>
 								</ul>
-							</form>
+							</form> -->
 						</div>
 						<footer>
 							<ul class="items">
@@ -457,7 +474,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 					</section>
 
 				<!-- Copyright -->
-					<div class="copyright">&copy;Kysercodes.</div>
+					<div class="copyright">&copy;Toinecodes.</div>
 
 			</div>
 
